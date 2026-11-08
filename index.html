@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Counter 🍣</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="sushi">🍣</div>
+
+        <h1>Sushi Counter</h1>
+        <p class="subtitle">How many sushi have you eaten?</p>
+
+        <div class="counter-box">
+            <span id="count">0</span>
+            <p>sushi eaten ♡</p>
+        </div>
+
+        <div class="buttons">
+            <button id="minus">−</button>
+            <button id="plus">+</button>
+        </div>
+
+        <button id="reset" class="reset">reset counter</button>
+
+        <p class="footer">made with ♡ and sushi</p>
+    </div>
+
+    <script>
+        let count = 0;
+
+        const display = document.getElementById("count");
+
+        document.getElementById("plus").onclick = function() {
+            count++;
+            display.textContent = count;
+        };
+
+        document.getElementById("minus").onclick = function() {
+            if (count > 0) {
+                count--;
+                display.textContent = count;
+            }
+        };
+
+        document.getElementById("reset").onclick = function() {
+            count = 0;
+            display.textContent = count;
+        };
+    </script>
+
+</body>
+</html>
